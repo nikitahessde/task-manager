@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Menu from "./components/Menu";
 import { TaskProvider } from "./context/TaskContext";
-import Home from "./pages/Home";
-import { CreateTask } from "./pages/CreateTask";
-import { TaskList } from "./pages/TaskList";
-import { TaskDetails } from "./pages/TaskDetails";
+import { HomePage } from "./pages/Home";
+import { CreateTaskPage } from "./pages/CreateTask";
+import { TaskListPage } from "./pages/TaskList";
+import { TaskDetailsPage } from "./pages/TaskDetails";
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
         <div className="w-1/2 flex flex-col gap-5">
           <Menu />
           <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/create-task" element={<CreateTask />}/>
-            <Route path="/task-list" element={<TaskList />}/>
-            <Route path="/task-details" element={<TaskDetails />}/>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="/create-task" element={<CreateTaskPage />}/>
+            <Route path="/task-list" element={<TaskListPage />}/>
+            <Route path="/task-details" element={<TaskDetailsPage />}/>
           </Routes>
         </div>
       </div>

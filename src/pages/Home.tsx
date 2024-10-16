@@ -1,13 +1,11 @@
-import AddNewTaskContainer from "../components/AddNewTask/AddNewTaskContainer";
-import TaskListContainer from "../components/TaskList/TaskListContainer";
+import AddNewTask from "../components/AddNewTask";
+import TaskList from "../components/TaskList";
 
-export const Home = () => {
+export const HomePage = () => {
   return (
     <div className="w-full flex flex-col gap-4 h-full">
-        <AddNewTaskContainer />
-        <TaskListContainer />
+        <AddNewTask />
+        <TaskList />
     </div>
   );
 };
-
-export default Home;

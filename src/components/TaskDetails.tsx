@@ -1,18 +1,11 @@
-interface Task {
-    id: string;
-    name: string;
-    description: string;
-    status: string;
-    createdAt: Date;
-}
+import { useTasks } from "../context/TaskContext";
 
-interface TaskDetailsProps {
-  tasks: Task[];
-}
+export const TaskDetails = () => {
+  const { tasks } = useTasks();
 
-export const TaskDetails = ({ tasks } : TaskDetailsProps) => {
   return (
-        <div className="overflow-x-auto rounded-lg w-full">
+    <div className={`border-2 border-primary bg-secondary rounded-lg p-4 flex flex-col gap-4`}>
+      <div className="overflow-x-auto rounded-lg w-full">
             <table className="w-full">
                 <thead>
                     <tr className="bg-gray-200 text-gray-600 text-sm leading-normal">
@@ -44,6 +37,8 @@ export const TaskDetails = ({ tasks } : TaskDetailsProps) => {
                 </tbody>
             </table>
         </div>
+    </div>
   );
 };
 
+export default TaskDetails;
