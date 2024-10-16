@@ -13,7 +13,7 @@ export const AddNewTaskContainer = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (taskName && taskDescription) {
-        addTask({ id: crypto.randomUUID(), name: taskName, description: taskDescription, status: 'todo' });
+        addTask({ id: crypto.randomUUID(), name: taskName, description: taskDescription, status: 'todo', createdAt: new Date() });
         setTaskName('');
         setTaskDescription('');
     }

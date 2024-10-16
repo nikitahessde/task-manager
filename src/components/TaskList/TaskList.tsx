@@ -38,7 +38,7 @@ export const TaskList: React.FC<TaskListProps> = ({ tasks, removeTask, changeSta
                 onChange={(e) => changeStatus(task.id, e.target.value)}
                 >
                 <option value="todo">To do</option>
-                <option value="in-progress">In progress</option>
+                <option value="inProgress">In progress</option>
                 <option value="done">Done</option>
                 </select>
                 <DeleteOutline className="cursor-pointer" onClick={() => removeTask(task.id)}/>
