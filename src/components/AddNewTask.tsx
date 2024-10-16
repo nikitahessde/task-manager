@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 
 export const AddNewTask = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const toggleCollapse = () => setIsCollapsed(!isCollapsed);
   const { addTask } = useTasks();
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
@@ -21,13 +20,13 @@ export const AddNewTask = () => {
   };
 
   return (
-    <div className={`border-2 border-primary bg-secondary rounded-lg p-4 flex flex-col gap-4`}>
+    <div className='border-2 border-primary bg-secondary rounded-lg p-4 flex flex-col gap-4'>
       <div className="flex justify-between">
         <p className="text-xl font-semibold">New task</p>
         {isCollapsed ? (
-            <ExpandMore onClick={toggleCollapse}  className="cursor-pointer"  />
+            <ExpandMore onClick={() => setIsCollapsed(false)}  className="cursor-pointer"  />
         ) : (
-            <ExpandLess onClick={toggleCollapse}  className="cursor-pointer"  /> 
+            <ExpandLess onClick={() => setIsCollapsed(true)}  className="cursor-pointer"  /> 
         )}
       </div>
       <form className={`space-y-4 ${isCollapsed ? 'hidden' : ''}`} onSubmit={handleSubmit(onSubmit)}>
