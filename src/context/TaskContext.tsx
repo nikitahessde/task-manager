@@ -18,6 +18,7 @@ interface Task {
     name: string;
     description: string;
     status: string;
+    createdAt: Date;
 }
 
 export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
