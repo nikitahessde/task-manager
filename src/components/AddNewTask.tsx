@@ -20,7 +20,7 @@ export const AddNewTask = () => {
   };
 
   return (
-    <div className='border-2 border-primary bg-secondary rounded-lg p-4 flex flex-col gap-4'>
+    <div className="border-2 border-primary bg-secondary rounded-lg p-4 flex flex-col gap-4">
       <div className="flex justify-between">
         <p className="text-xl font-semibold">New task</p>
         {isCollapsed ? (

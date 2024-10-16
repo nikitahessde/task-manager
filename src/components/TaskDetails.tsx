@@ -4,7 +4,7 @@ export const TaskDetails = () => {
   const { tasks } = useTasks();
 
   return (
-    <div className='border-2 border-primary bg-secondary rounded-lg p-4 flex flex-col gap-4'>
+    <div className="border-2 border-primary bg-secondary rounded-lg p-4 flex flex-col gap-4">
       <div className="overflow-x-auto rounded-lg w-full">
             <table className="w-full">
                 <thead>
