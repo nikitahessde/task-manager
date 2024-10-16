@@ -1,5 +1,4 @@
 import { DeleteOutline } from "@mui/icons-material";
-import { useState } from 'react';
 import { Tooltip } from '@mui/material';
 
 interface Task {
